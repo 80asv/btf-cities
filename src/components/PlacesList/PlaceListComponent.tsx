@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import {useState} from "react";
+import {City} from "../../App.tsx";
 const places = [
     {
         id: 1,
@@ -45,12 +46,15 @@ const places = [
     }
 ]
 
-const PlaceListComponent = (props) => {
+interface PlaceListComponentProps {
+    setCity: (city: City) => void;
+}
 
+const PlaceListComponent = (props: PlaceListComponentProps) => {
     const [cityVoted, setCityVoted] = useState(
-        localStorage.getItem('city') ? JSON.parse(localStorage.getItem('city')) : null
+        localStorage.getItem('city') ? JSON.parse(localStorage.getItem('city') ??'') : null
     )
-    const voteCity = (city) => {
+    const voteCity = (city: City) => {
         localStorage.setItem('city', JSON.stringify(city))
         setCityVoted(city);
     };

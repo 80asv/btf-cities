@@ -3,8 +3,14 @@ import CityDetail from "./components/CityDetail/CityDetail.tsx";
 import {useState} from "react";
 import {motion} from "framer-motion";
 
+export interface City {
+    name: string;
+    description: string;
+    image: string;
+}
+
 function App() {
-  const [city, setCity] = useState(null)
+  const [city, setCity] = useState<City | null>(null)
   return (
       <div className={"flex w-full h-screen"}>
         <motion.div

@@ -1,6 +1,11 @@
 import PlaceListComponent from "./PlaceListComponent.tsx";
+import {City} from "../../App.tsx";
 
-const PlaceListContainer = (props) => {
+interface PlaceListContainerProps {
+   setCity: (city: City | null) => void;
+}
+
+const PlaceListContainer = (props: PlaceListContainerProps) => {
     return <PlaceListComponent setCity={props.setCity}/>;
 };
 export default PlaceListContainer;

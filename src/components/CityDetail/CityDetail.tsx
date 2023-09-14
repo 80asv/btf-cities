@@ -1,5 +1,11 @@
 import { motion } from "framer-motion";
-const CityDetail = ({city, setCity}) => {
+import {City} from "../../App.tsx";
+
+interface CityDetailProps {
+    city: City;
+    setCity: (city: City | null) => void;
+}
+const CityDetail = ({city, setCity}: CityDetailProps) => {
     return(
         <motion.div
             initial={{
