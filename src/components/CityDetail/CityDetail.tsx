@@ -5,6 +5,8 @@ interface CityDetailProps {
     city: City;
     setCity: (city: City | null) => void;
 }
+
+// By Andres rodriguez
 const CityDetail = ({city, setCity}: CityDetailProps) => {
     return(
         <motion.div
