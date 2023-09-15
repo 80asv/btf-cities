@@ -9,6 +9,8 @@ export interface City {
     image: string;
 }
 
+// By Cristian Rojas
+
 function App() {
   const [city, setCity] = useState<City | null>(null)
   return (
