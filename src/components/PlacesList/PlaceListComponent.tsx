@@ -49,7 +49,7 @@ const places = [
 interface PlaceListComponentProps {
     setCity: (city: City) => void;
 }
-
+// By Andres Sanabria
 const PlaceListComponent = (props: PlaceListComponentProps) => {
     const [cityVoted, setCityVoted] = useState(
         localStorage.getItem('city') ? JSON.parse(localStorage.getItem('city') ??'') : null
