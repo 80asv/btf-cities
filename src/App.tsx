@@ -22,7 +22,7 @@ function App() {
         }} className={` px-12`}>
           <div className="my-12">
             <h1 className={'text-center text-3xl font-medium'}>Six beautiful cities in the world</h1>
-            <p className={"text-center text-sm mt-3 text-gray-500"}>By Andres Sanabria</p>
+            <p className={"text-center text-sm mt-3 text-gray-500"}>By Andres Sanabria, Andres Rodriguez and Cristian Rojas</p>
           </div>
           <PlaceList setCity={setCity}/>
         </motion.div>
